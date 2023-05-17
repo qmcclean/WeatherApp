@@ -1,0 +1,73 @@
+
+ext {
+    def coreVersion = '1.10.1'
+    def koinVersion = '3.4.0'
+    def koinComposeVersion = '3.4.3'
+    def retrofitVersion = '2.9.0'
+    def okhttpVersion = '4.10.0'
+    def coroutineVersion = '1.6.4'
+    def navVersion = '2.5.3'
+    def mockkVersion = '1.13.5'
+
+
+    BOMs = [
+            compose                 : "androidx.compose:compose-bom:2023.04.01"
+    ]
+    core = [
+            core                    : "androidx.core:core-ktx:$coreVersion",
+            lifecycle               : "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1",
+            fragment                : "androidx.navigation:navigation-fragment-ktx:${navVersion}",
+            navigation              : "androidx.navigation:navigation-ui-ktx:${navVersion}",
+            constraintLayout        : "androidx.constraintlayout:constraintlayout:2.1.4",
+            material                : "com.google.android.material:material:1.9.0",
+            viewModel               : "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1",
+            liveData                : "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1",
+            legacy                  : "androidx.legacy:legacy-support-v4:1.0.0",
+            coil                    : "io.coil-kt:coil-compose:2.3.0",
+            activity                : "androidx.activity:activity-ktx:1.4.0"
+    ]
+    compose = [
+            compose                 : "androidx.activity:activity-compose:1.7.1",
+            ui                      : "androidx.compose.ui:ui:1.4.3",
+            graphics                : "androidx.compose.ui:ui-graphics:1.4.3",
+            tooling                 : "androidx.compose.ui:ui-tooling-preview:1.4.3",
+            material3               : "androidx.compose.material3:material3:1.1.0-beta01"
+    ]
+    navigation = [
+            navigation              : "androidx.navigation:navigation-ui-ktx:2.4.1",
+            fragment                : "androidx.navigation:navigation-fragment-ktx:2.4.1"
+    ]
+    koin = [
+            core                    : "io.insert-koin:koin-core:${koinVersion}",
+            android                 : "io.insert-koin:koin-android:${koinVersion}",
+            androidXCompose         : "io.insert-koin:koin-androidx-compose:${koinComposeVersion}",
+            composeNavigation       : "io.insert-koin:koin-androidx-compose-navigation:${koinComposeVersion}"
+    ]
+    network = [
+            kotlinSerialization     : "org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1",
+            retrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitJsonConverter   : "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0",
+            okhttp                  : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
+            okhttpLogging           : "com.squareup.okhttp3:logging-interceptor:${okhttpVersion}",
+            location                : "com.google.android.gms:play-services-location:21.0.1"
+    ]
+    coroutines = [
+            core                    : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutineVersion}",
+            android                 : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutineVersion}"
+    ]
+    test = [
+            junitTest               : "junit:junit:4.13.2",
+            mockk                   : "io.mockk:mockk:${mockkVersion}",
+            coroutines              : "org.jetbrains.kotlinx:kotlinx-coroutines-test:${coroutineVersion}"
+    ]
+    androidTest = [
+            androidXJunit           : "androidx.test.ext:junit:1.1.5",
+            androidXEspresspCore    : "androidx.test.espresso:espresso-core:3.5.1",
+            composeUi               : "androidx.compose.ui:ui-test-junit4:1.4.3",
+            mockk                   : "io.mockk:mockk-android:${mockkVersion}"
+    ]
+    composeTest = [
+            tooling                 : "androidx.compose.ui:ui-tooling",
+            manifest                : "androidx.compose.ui:ui-test-manifest"
+    ]
+}
